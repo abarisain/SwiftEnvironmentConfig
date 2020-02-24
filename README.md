@@ -11,6 +11,13 @@ It allows for eager loading of the configuration, and can be made to volountaril
 
 The library uses property wrappers as java-like annotations to achieve this.
 
+## Using it in your project
+
+This library is distributed using SwiftPM:
+```Swift
+.package(url: "https://github.com/abarisain/SwiftEnvironmentConfig.git", from: "1.0.0-beta1")
+```
+
 ## Usage
 
 EnvironmentConfig can be used in two ways:
