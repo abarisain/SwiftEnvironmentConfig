@@ -2,9 +2,9 @@
 
 ![swift](https://img.shields.io/badge/Swift-5.1-orange.svg)
 ![platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20iOS%20%7C%20tvOS%20%7C%20watchOS-lightgrey.svg)
-![version](https://img.shields.io/github/v/release/abarisain/:SwiftEnvironmentConfig?include_prereleases)
-![GitHub Workflow Status - macOS](https://img.shields.io/github/workflow/status/abarisain/SwiftEnvironmentConfig/macos?label=macOS%20build)
-![GitHub Workflow Status - Linux](https://img.shields.io/github/workflow/status/abarisain/SwiftEnvironmentConfig/linux?label=linux%20build)
+![version](https://img.shields.io/github/v/release/abarisain/SwiftEnvironmentConfig?include_prereleases)
+![GitHub Workflow Status - macOS](https://img.shields.io/github/workflow/status/abarisain/SwiftEnvironmentConfig/macOS?label=macOS%20build)
+![GitHub Workflow Status - Linux](https://img.shields.io/github/workflow/status/abarisain/SwiftEnvironmentConfig/Linux?label=linux%20build)
 
 EnvironmentConfig is a Swift library that allows you to parse environement variables into a struct, converting them if needed and possible.
 It allows for eager loading of the configuration, and can be made to volountarily crash your program early if a missing variable is needed.
