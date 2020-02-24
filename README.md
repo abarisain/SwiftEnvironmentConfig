@@ -158,8 +158,8 @@ extension Data: EnvironmentValueInitializable {
 
 ## Roadmap
 
-- [] Array support
-- [] Support nested structs (if possible)
+- [ ] Array support
+- [ ] Support nested structs (if possible)
 
 ## Credits
 
