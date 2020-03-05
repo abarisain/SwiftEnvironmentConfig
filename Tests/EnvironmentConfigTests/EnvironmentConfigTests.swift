@@ -2,7 +2,7 @@ import XCTest
 @testable import EnvironmentConfig
 
 #if os(Linux)
-import CwlPosixPreconditionTesting
+//import CwlPosixPreconditionTesting
 #else
 import CwlPreconditionTesting
 #endif
@@ -57,6 +57,8 @@ final class EnvironmentConfigTests: XCTestCase {
     }
     
     func testFatalMissing() {
+        #if os(Linux)
+        #else
         struct Test {
             @EnvField(name: "envconfig_missing")
             public var missing: Int
@@ -65,6 +67,7 @@ final class EnvironmentConfigTests: XCTestCase {
         XCTAssertNotNil(catchBadInstruction {
             let _ = Test()
         })
+        #endif
     }
     
     func testOptionals() {
