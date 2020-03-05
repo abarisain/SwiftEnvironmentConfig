@@ -25,10 +25,10 @@ let package = Package(
             name: "EnvironmentConfigTests",
             dependencies: {
                 var deps: [Target.Dependency] = ["EnvironmentConfig"]
-                #if os(macOS)
-                    deps.append("CwlPreconditionTesting")
+                #if os(linux)
+                    //deps.append("CwlPosixPreconditionTesting")
                 #else
-                    deps.append("CwlPosixPreconditionTesting")
+                    deps.append("CwlPreconditionTesting")
                 #endif
                 return deps
             }()
