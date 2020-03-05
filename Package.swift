@@ -14,10 +14,6 @@ let package = Package(
     dependencies: [
         // Test dependencies
         .package(url: "https://github.com/mattgallagher/CwlPreconditionTesting.git", from: Version("2.0.0-beta.1")),
-        
-        // Dev dependencies
-        // Install these locally so we can use "swift run <tool>"
-        .package(url: "https://github.com/nicklockwood/SwiftFormat", from: "0.44.1"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
