@@ -23,6 +23,14 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "EnvironmentConfigTests",
-            dependencies: ["EnvironmentConfig", "CwlPreconditionTesting"]),
+            dependencies: {
+                var deps = ["EnvironmentConfig"]
+                #if os(macOS) {
+                    deps.append("CwlPreconditionTesting")
+                } else {
+                    deps.append("CwlPosixPreconditionTesting")
+                }
+                return deps
+            }(),
     ]
 )

@@ -1,6 +1,11 @@
 import XCTest
 @testable import EnvironmentConfig
+
+#if os(Linux)
 import CwlPreconditionTesting
+#else
+import CwlPosixPreconditionTesting
+#endif
 
 final class EnvironmentConfigTests: XCTestCase {
     
