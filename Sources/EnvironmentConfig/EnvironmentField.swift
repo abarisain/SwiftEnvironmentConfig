@@ -89,6 +89,21 @@ extension EnvField where T: ExpressibleByNilLiteral {
     }
 }
 
+extension EnvField: CustomStringConvertible {
+    public var description: String {
+        get {
+            if !initialized {
+                return "EnvField: Uninitialized"
+            }
+            if let value = value {
+                return "EnvField: " + String(describing: value)
+            } else {
+                return "EnvField: nil"
+            }
+        }
+    }
+}
+
 extension Optional: EnvironmentValueInitializable where Wrapped: EnvironmentValueInitializable {
     public static func from(envValue: String) -> Any? {
         Wrapped.from(envValue: envValue) as? Wrapped
